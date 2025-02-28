@@ -8,9 +8,11 @@ body {
     text-align: center;
 }
 
-p{
-    font-size: 1;
+p {
+    font-size: 1em;
+    line-height: 1.6; 
     text-align: justify;
+    margin-bottom: 15px; 
 }
 .text-center{
     text-align: center;
