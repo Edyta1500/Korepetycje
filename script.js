@@ -47,3 +47,20 @@ document.addEventListener("DOMContentLoaded", function() {
         contactForm.reset();
     });
 });
+//Rozwijane menu hamburger
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+
+    // Kliknięcie w hamburger otwiera menu
+    hamburger.addEventListener("click", function() {
+        navMenu.classList.toggle("show");
+    });
+
+    // Zamknięcie menu po kliknięciu w link
+    document.querySelectorAll("nav ul li a").forEach(link => {
+        link.addEventListener("click", function() {
+            navMenu.classList.remove("show");
+        });
+    });
+});
