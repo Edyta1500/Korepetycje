@@ -10,53 +10,93 @@ body {
 
 /* ======== HEADER ======== */
 header {
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 30px;
-    background: rgba(0, 0, 0, 0.4);
-    flex-wrap: wrap;
+    padding: 8px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    max-width: 100%;
+    height: 50px;
+    z-index: 1000;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    position:absolute;
+    top:5;
+    left:10;
+    transition: transform 0.3s ease-in-out;
+}
+.logo-container:hover {
+    transform: scale(1.05); 
 }
 
 .logo-img {
-    height: 50px;
+    height: 40px;
     width: auto;
 }
 
 .logo-text {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
     color: white;
+}
+nav {
+    position: absolute;
+    top: 15px;
+    right: 5%;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    flex-direction: row;
+    gap: 15px;
     padding: 0;
     margin: 0;
 }
 
+nav ul li {
+    display: inline-block; 
+}
+/* ======== LINKI MENU ======== */
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal;
+    font: size 0.9em;
+    position: relative;
     transition: color 0.3s ease;
+}
+/* ======== ANIMACJA PODKREŚLENIA ======== */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px; 
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #FFD700;
+    color:white;
+}
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 /* ======== SEKCJA HERO ======== */
 .hero {
-    background: url('images/bg.jpg') no-repeat center/cover;
+    background: url('images/bg4.jpg') no-repeat center/cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -166,20 +206,31 @@ button.cta:hover {
 /* ======== RESPONSYWNOŚĆ ======== */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-direction: row;
+        height: auto;
+        padding: 5px 15px;
+    }
+    .logo-container {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    nav {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-left: auto;
     }
 
     nav ul {
-        flex-direction: column;
-        text-align: center;
-        padding: 0;
+        gap: 10px;
     }
-
-    .about-content, .goals-content, .trial-content, .faq-content, .contact-content {
+    nav ul li a {
+        font-size: 0.85em;
+    }
+    /* .about-content, .goals-content, .trial-content, .faq-content, .contact-content {
         padding: 20px;
-    }
+    } */
 }
 
 @media (max-width: 480px) {
@@ -194,5 +245,18 @@ button.cta:hover {
     .goal-item {
         font-size: 1.2em;
         margin-bottom: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    header {
+        height: auto;
     }
 }
