@@ -8,7 +8,13 @@ body {
     text-align: center;
 }
 
-
+p{
+    font-size: 1;
+    text-align: justify;
+}
+.text-center{
+    text-align: center;
+}
 /* ======== HEADER ======== */
 header {
     position:fixed;
@@ -111,7 +117,7 @@ nav ul li a:hover::after {
 
 /* ======== SEKCJA HERO ======== */
 .hero {
-    background: url('images/bg4.jpg') no-repeat center/cover;
+    background: url('images/bg6.jpg') no-repeat center/cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
