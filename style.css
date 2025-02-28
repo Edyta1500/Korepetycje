@@ -309,6 +309,33 @@ button.cta:hover {
     background-color: #5A8C9E;
     transform: scale(1.0);
 }
+/* ======== STOPKA ======== */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.8); /* Ciemne tło */
+    color: white;
+    padding: 15px 0;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* ======== IKONA FACEBOOKA ======== */
+.fb-icon {
+    display: inline-block;
+    color: white;
+    font-size: 1.5em;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, color 0.3s ease;
+}
+
+.fb-icon:hover {
+    transform: scale(1.2);
+    color: #1877f2; /* Kolor FB po najechaniu */
+}
 /* ======== RESPONSYWNOŚĆ ======== */
 @media (min-width: 1400px) {
     .contact-content {
