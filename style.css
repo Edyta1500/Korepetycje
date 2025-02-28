@@ -8,6 +8,7 @@ body {
     text-align: center;
 }
 
+
 p {
     font-size: 1em;
     line-height: 1.6; 
@@ -153,6 +154,7 @@ nav ul li a:hover::after {
     font-size: 3em;
     color: white;
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+    line-height: 2.2em;
 }
 
 
@@ -303,11 +305,12 @@ button.cta {
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
+   
 }
 
 button.cta:hover {
     background-color: #5A8C9E;
-    transform: scale(1.0);
+    transform: scale(1.3);
 }
 /* ======== STOPKA ======== */
 .footer {
@@ -315,26 +318,34 @@ button.cta:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.8); /* Ciemne tło */
-    color: white;
+    background: #E3E6DA; /* Dopasowany kolor tła */
+    color: #2F4F4F; /* Dopasowany kolor tekstu */
     padding: 15px 0;
     font-size: 1em;
     text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Delikatna linia oddzielająca */
 }
 
-/* ======== IKONA FACEBOOKA ======== */
+/* ======== IKONA FACEBOOKA – W KÓŁKU ======== */
 .fb-icon {
-    display: inline-block;
-    color: white;
-    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; /* Wielkość kółka */
+    height: 30px;
+    border-radius: 50%;
+    background: #2F4F4F; /* Dopasowany kolor tła do tekstu */
+    color: white; /* Biała ikona */
+    font-size: 0.9em; /* Proporcjonalna do znaku © */
     margin-top: 10px;
     text-decoration: none;
-    transition: transform 0.3s ease-in-out, color 0.3s ease;
+    transition: transform 0.3s ease-in-out, background 0.3s ease;
 }
 
+/* Efekt hover – powiększenie i zmiana koloru */
 .fb-icon:hover {
     transform: scale(1.2);
-    color: #1877f2; /* Kolor FB po najechaniu */
+    background: #1877f2; /* Kolor Facebooka */
 }
 /* ======== RESPONSYWNOŚĆ ======== */
 @media (min-width: 1400px) {
