@@ -21,3 +21,29 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const contactForm = document.getElementById("contact-form");
+    const formMessage = document.getElementById("form-message");
+
+    contactForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Pobranie wartości pól formularza
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        // Symulacja wysłania formularza (można podłączyć do backendu)
+        console.log("Formularz wysłany!");
+        console.log("Imię:", name);
+        console.log("E-mail:", email);
+        console.log("Wiadomość:", message);
+
+        // Wyświetlenie komunikatu o sukcesie
+        formMessage.textContent = "Dziękuję za wiadomość! Odpowiem najszybciej, jak to możliwe.";
+        formMessage.style.display = "block";
+
+        // Czyszczenie formularza
+        contactForm.reset();
+    });
+});

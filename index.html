@@ -128,9 +128,26 @@
     <section id="contact" class="contact">
         <div class="contact-content">
             <h2>Kontakt</h2>
-            <p>Skontaktuj się: <strong>kontakt@korepetycje-pyszczak.pl</strong></p>
+            <p>Masz pytania? Napisz do mnie!</p>
+            <p><strong>E-mail:</strong> <a href="mailto:kontakt@korepetycje-pyszczak.pl">kontakt@korepetycje-pyszczak.pl</a></p>
+    
+            <form id="contact-form">
+                <label for="name">Imię:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Twój e-mail:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Twoja wiadomość:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+    
+                <button type="submit" class="cta">Wyślij wiadomość</button>
+            </form>
+    
+            <p id="form-message" style="display: none; color: green; font-weight: bold;"></p>
         </div>
     </section>
+    
 
     <script src="script.js"></script>
 </body>
