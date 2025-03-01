@@ -78,7 +78,7 @@ nav ul {
 nav ul li {
     display: inline-block; 
 }
-/* ======== HAMBURGER - POJAWIA SIĘ TYLKO NA MOBILNYCH ======== */
+
 /* ======== STYL HAMBURGERA ======== */
 .hamburger {
     display: none;
@@ -101,7 +101,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: normal;
-    font: size 0.9em;
+    font-size: 0.9em;
     position: relative;
     transition: color 0.3s ease;
 }
@@ -127,7 +127,7 @@ nav ul li a:hover::after {
 
 /* ======== SEKCJA HERO ======== */
 .hero {
-    background: url('images/bg6.jpg') no-repeat center/cover;
+    background: url('images/bg13.jpg') no-repeat center/cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -170,7 +170,47 @@ nav ul li a:hover::after {
     color: white;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); 
 }
+.button-container {
+    display: flex;
+    gap: 40px; 
+    justify-content: center;
+    margin-top: 20px;
+}
+.cta {
+    font-size: 3em; 
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+}
+.cta.call {
+   
+    color: white;
+}
+.cta.call:hover,
+.cta.call:focus {
+    cursor: pointer;
+    transform: scale(1.2); 
+}
 
+
+
+.cta.message {
+    
+    color: white;
+}
+
+.cta.message:hover {
+    
+    transform: scale(1.2);
+}
+.cta i {
+    font-size: 1.2em;
+}
 /* ======== SEKCJE OGÓLNE ======== */
  .goals, .trial, .faq, .contact {
     padding: 100px 20px;
@@ -324,13 +364,34 @@ button.cta:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     background: #E3E6DA; /* Dopasowany kolor tła */
     color: #2F4F4F; /* Dopasowany kolor tekstu */
     padding: 15px 0;
     font-size: 1em;
     text-align: center;
     border-top: 1px solid rgba(0, 0, 0, 0.1); /* Delikatna linia oddzielająca */
+}
+
+/* ======== IKONA FACEBOOKA – W KÓŁKU W JEDNEJ LINII ======== */
+.fb-icon {
+    display: inline-flex; /* Zapewnia wyrównanie z tekstem */
+    align-items: center;
+    justify-content: center;
+    width: 25px; /* Mniejsza ikona dla lepszego dopasowania */
+    height: 25px;
+    border-radius: 50%;
+    background: #2F4F4F; /* Dopasowany kolor tła do tekstu */
+    color: white; /* Biała ikona */
+    font-size: 0.8em; /* Proporcjonalna do znaku © */
+    margin-left: 10px; /* Odstęp od tekstu */
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, background 0.3s ease;
+}
+
+/* Efekt hover – powiększenie i zmiana koloru */
+.fb-icon:hover {
+    transform: scale(1.2);
+    background: #1877f2; /* Kolor Facebooka */
 }
 
 /* ======== IKONA FACEBOOKA – W KÓŁKU ======== */
@@ -542,7 +603,21 @@ button.cta:hover {
     }
 
     button.cta {
-        font-size: 0.85em;
+        font-size: 1em;
         padding: 6px 10px;
+    }
+    .button-container {
+       
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cta {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5em;
+    }
+    .cta i {
+        font-size: 1em;
     }
 }
