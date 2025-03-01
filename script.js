@@ -72,5 +72,21 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+//OBŁUGA COOKIES
+document.addEventListener("DOMContentLoaded", function() {
+    const cookieBanner = document.getElementById("cookie-banner");
+    const acceptCookiesBtn = document.getElementById("accept-cookies");
+
+    // Sprawdzenie, czy użytkownik już zaakceptował cookies
+    if (localStorage.getItem("cookiesAccepted") === "true") {
+        cookieBanner.style.display = "none";
+    }
+
+    // Obsługa kliknięcia przycisku "Akceptuję"
+    acceptCookiesBtn.addEventListener("click", function() {
+        localStorage.setItem("cookiesAccepted", "true"); // Zapis zgody
+        cookieBanner.style.display = "none"; // Ukrycie banneru
+    });
+});
 
 
