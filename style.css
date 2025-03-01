@@ -79,6 +79,7 @@ nav ul li {
     display: inline-block; 
 }
 /* ======== HAMBURGER - POJAWIA SIĘ TYLKO NA MOBILNYCH ======== */
+/* ======== STYL HAMBURGERA ======== */
 .hamburger {
     display: none;
     font-size: 2em;
@@ -88,6 +89,12 @@ nav ul li {
     top: 10px;
     right: 40px;
     z-index: 1010;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efekt kliknięcia – lekkie powiększenie */
+.hamburger:active {
+    transform: scale(1.1);
 }
 /* ======== LINKI MENU ======== */
 nav ul li a {
@@ -459,13 +466,13 @@ button.cta:hover {
     .hero-content h1 {
         font-size: 1.5em;
     }
-.logo-text{
+    .logo-text{
     font-size: 1.2em;
-}
-.logo-img {
+    }
+    .logo-img {
     height: 40px;
    
-}
+    }
     .about-content, .goals-content, .trial-content, .faq-content, .contact-content {
         padding: 15px;
     }
@@ -476,7 +483,7 @@ button.cta:hover {
     }
     nav ul {
         flex-direction: column;
-        gap: 5px;
+        gap: 20px;
         text-align: center;
     }
 

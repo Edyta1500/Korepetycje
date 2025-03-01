@@ -52,15 +52,25 @@ document.addEventListener("DOMContentLoaded", function() {
     const hamburger = document.getElementById("hamburger");
     const navMenu = document.getElementById("nav-menu");
 
-    // Kliknięcie w hamburger otwiera menu
+    // Kliknięcie w hamburger otwiera menu i zmienia ikonę
     hamburger.addEventListener("click", function() {
         navMenu.classList.toggle("show");
+        
+        // Zmiana ikony
+        if (navMenu.classList.contains("show")) {
+            hamburger.innerHTML = "✖"; // Krzyżyk
+        } else {
+            hamburger.innerHTML = "☰"; // Trzy kreski
+        }
     });
 
-    // Zamknięcie menu po kliknięciu w link
+    // Zamknięcie menu po kliknięciu w link i zmiana ikony z powrotem
     document.querySelectorAll("nav ul li a").forEach(link => {
         link.addEventListener("click", function() {
             navMenu.classList.remove("show");
+            hamburger.innerHTML = "☰"; // Powrót do trzech kresek
         });
     });
 });
+
+
