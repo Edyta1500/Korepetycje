@@ -135,6 +135,7 @@ nav ul li a:hover::after {
     align-items: center;
     text-align: center;
     position: relative;
+   
 }
 /* Półprzezroczysta nakładka dla lepszego kontrastu */
 .hero::before {
@@ -212,7 +213,7 @@ nav ul li a:hover::after {
     font-size: 1.2em;
 }
 /* ======== SEKCJE OGÓLNE ======== */
- .goals, .trial, .faq, .contact {
+ .about,.goals, .trial, .faq, .contact {
     padding: 100px 20px;
     text-align: center;
     background: #E3E6DA;
