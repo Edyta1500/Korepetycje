@@ -166,7 +166,27 @@
             </div>
         </div>
     </section>
-
+    <section id="opinie" class="opinie">
+        <div class="opinie-content">
+            <h2>Opinie klientów</h2>
+            <div class="fb-reviews">
+                <div class="fb-page" 
+                     data-href="https://www.facebook.com/YOUR_PAGE_NAME" 
+                     data-tabs="reviews"
+                     data-width="500" 
+                     data-height="400" 
+                     data-small-header="false"
+                     data-adapt-container-width="true"
+                     data-hide-cover="false"
+                     data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/share/1SCUcyynfN/" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/share/1SCUcyynfN/">Opinie na Facebooku</a>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section id="contact" class="contact">
         <div class="contact-content">
             <h2>Kontakt</h2>
@@ -207,7 +227,12 @@
             ich użycie.</p>
         <button id="accept-cookies" class="cookie-btn">Akceptuję</button>
     </div>
-
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+            src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v17.0" 
+            nonce="ABC123">
+    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

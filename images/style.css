@@ -127,7 +127,7 @@ nav ul li a:hover::after {
 
 /* ======== SEKCJA HERO ======== */
 .hero {
-    background: url('images/bg6.jpg') no-repeat center/cover;
+    background: url('images/bg13.jpg') no-repeat center/cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -282,34 +282,6 @@ nav ul li a:hover::after {
     font-size: 1.5em;
     color: #3E707A;
 }
-/* ======== SEKCJA OPINII ======== */
-.opinie {
-    padding: 80px 20px;
-    text-align: center;
-    background: #E3E6DA; /* Dopasowanie do reszty strony */
-}
-
-.opinie-content {
-    background: white;
-    padding: 30px;
-    max-width: 600px;
-    margin: 0 auto;
-    border-radius: 15px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.opinie h2 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    color: #2F4F4F;
-}
-
-.fb-reviews {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 /* ======== FAQ ======== */
 .faq-question {
