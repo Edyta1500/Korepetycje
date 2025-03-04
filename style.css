@@ -378,6 +378,11 @@ input, textarea {
 }
 
 button.cta {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: inherit;
+  width: fit-content;
     background-color: #3E707A;
     color: white;
     font-size: 1em;
@@ -551,7 +556,6 @@ button.cta:hover {
         font-weight: bold;
     }
 
-    /* Pokazanie menu po kliknięciu */
     nav.show {
         transform: translateY(0);
         display: flex;
@@ -586,8 +590,9 @@ button.cta:hover {
     }
 
     button.cta {
-        font-size: 1em;
+        font-size: 0.9em;
         padding: 10px;
+        width: 60%;
     }
     /* .about-content, .goals-content, .trial-content, .faq-content, .contact-content {
         padding: 20px;
@@ -639,12 +644,13 @@ button.cta:hover {
     }
 
     button.cta {
-        font-size: 1em;
+        font-size: 0.8em;
         padding: 6px 10px;
     }
     .button-container {
        
         flex-direction: column;
+        align-items: center;
         gap: 20px;
     }
 
