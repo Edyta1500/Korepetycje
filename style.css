@@ -191,6 +191,9 @@ nav ul li a:hover::after {
 .cta.call {
    
     color: white;
+    position: relative;
+    z-index: 1000;
+    pointer-events: auto;
 }
 .cta.call:hover,
 .cta.call:focus {
@@ -201,8 +204,10 @@ nav ul li a:hover::after {
 
 
 .cta.message {
-    
     color: white;
+    position: relative;
+    z-index: 1000;
+    pointer-events: auto;
 }
 
 .cta.message:hover {
@@ -521,7 +526,7 @@ button.cta:hover {
         left: 0;
         width: 100%;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.8); /* Matowe tło */
+        background: rgba(0, 0, 0, 0.8); 
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         display: flex;
@@ -549,6 +554,8 @@ button.cta:hover {
     /* Pokazanie menu po kliknięciu */
     nav.show {
         transform: translateY(0);
+        display: flex;
+        flex-direction: column;
     }
     .hamburger {
         display: block; 

@@ -52,15 +52,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const hamburger = document.getElementById("hamburger");
     const navMenu = document.getElementById("nav-menu");
 
-    // Kliknięcie w hamburger otwiera menu i zmienia ikonę
+   
     hamburger.addEventListener("click", function() {
-        navMenu.classList.toggle("show");
         
-        // Zmiana ikony
+        navMenu.classList.toggle("show");
+       
+    
         if (navMenu.classList.contains("show")) {
-            hamburger.innerHTML = "✖"; // Krzyżyk
+            hamburger.innerHTML = "✖"; 
         } else {
-            hamburger.innerHTML = "☰"; // Trzy kreski
+            hamburger.innerHTML = "☰"; 
         }
     });
 
